@@ -238,6 +238,7 @@
             this.cboJobStatus.Name = "cboJobStatus";
             this.cboJobStatus.Size = new System.Drawing.Size(134, 22);
             this.cboJobStatus.TabIndex = 15;
+            this.cboJobStatus.Tag = "6";
             // 
             // label6
             // 
@@ -255,7 +256,7 @@
             this.txtOutDate.Name = "txtOutDate";
             this.txtOutDate.Size = new System.Drawing.Size(134, 22);
             this.txtOutDate.TabIndex = 3;
-            this.txtOutDate.Tag = "3";
+            this.txtOutDate.Tag = "8";
             this.txtOutDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtInDate
@@ -265,7 +266,7 @@
             this.txtInDate.Name = "txtInDate";
             this.txtInDate.Size = new System.Drawing.Size(165, 22);
             this.txtInDate.TabIndex = 3;
-            this.txtInDate.Tag = "3";
+            this.txtInDate.Tag = "7";
             this.txtInDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPhone
@@ -274,7 +275,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(134, 22);
             this.txtPhone.TabIndex = 12;
-            this.txtPhone.Tag = "13";
+            this.txtPhone.Tag = "10";
             // 
             // txtMail
             // 
@@ -282,7 +283,7 @@
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(590, 22);
             this.txtMail.TabIndex = 10;
-            this.txtMail.Tag = "9";
+            this.txtMail.Tag = "12";
             // 
             // txtMobile
             // 
@@ -290,7 +291,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(165, 22);
             this.txtMobile.TabIndex = 10;
-            this.txtMobile.Tag = "9";
+            this.txtMobile.Tag = "11";
             // 
             // txtPwd
             // 
@@ -298,9 +299,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPwd.Location = new System.Drawing.Point(413, 98);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(279, 22);
+            this.txtPwd.Size = new System.Drawing.Size(278, 22);
             this.txtPwd.TabIndex = 8;
-            this.txtPwd.Tag = "10";
+            this.txtPwd.Tag = "4";
             // 
             // txtID
             // 
@@ -309,7 +310,7 @@
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(165, 22);
             this.txtID.TabIndex = 6;
-            this.txtID.Tag = "6";
+            this.txtID.Tag = "3";
             // 
             // txtC_Code
             // 
@@ -372,9 +373,9 @@
             this.txt_C_Name.Location = new System.Drawing.Point(413, 66);
             this.txt_C_Name.Name = "txt_C_Name";
             this.txt_C_Name.ReadOnly = true;
-            this.txt_C_Name.Size = new System.Drawing.Size(279, 22);
+            this.txt_C_Name.Size = new System.Drawing.Size(278, 22);
             this.txt_C_Name.TabIndex = 2;
-            this.txt_C_Name.Tag = "2";
+            this.txt_C_Name.Tag = "";
             // 
             // label9
             // 

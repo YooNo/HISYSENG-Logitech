@@ -91,11 +91,11 @@ namespace HISYSENG_Logitech
         {
             try
             {
-                if (DialogResult.Yes == MessageBox.Show("회사를 삭제하시겠습니까?", "회사 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                if (DialogResult.Yes == MessageBox.Show("사용자를 삭제하시겠습니까?", "사용자 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     if (actRow != null)
                     {
-                        if (Qry.Rs_NonQuery("DELETE G_COMPANY WHERE C_CODE = '" + actRow.Cells["C_Code"].Value.ToString() + "'"))
+                        if (Qry.Rs_NonQuery("DELETE G_USERS WHERE C_CODE = '" + actRow.Cells["C_Code"].Value.ToString() + "' AND ID = '" + actRow.Cells["ID"].Value.ToString() + "'"))
                         {
                             GrdSearch();
 
@@ -132,11 +132,14 @@ namespace HISYSENG_Logitech
                     {
                         if (typeof(System.Windows.Forms.TextBox) == ctl.GetType() || typeof(System.Windows.Forms.MaskedTextBox) == ctl.GetType())
                         {
-                            Values[int.Parse(ctl.Tag.ToString()), 0] = ctl.Text.Replace("'", "");
-                            Values[int.Parse(ctl.Tag.ToString()), 1] = ctl.Tag.ToString();
+                            if (ctl.Tag != string.Empty)
+                            {
+                                Values[int.Parse(ctl.Tag.ToString()), 0] = ctl.Text.Replace("'", "");
+                                Values[int.Parse(ctl.Tag.ToString()), 1] = ctl.Tag.ToString();
 
-                            if (int.Parse(ctl.Tag.ToString()) > Idx)
-                                Idx = int.Parse(ctl.Tag.ToString());
+                                if (int.Parse(ctl.Tag.ToString()) > Idx)
+                                    Idx = int.Parse(ctl.Tag.ToString());
+                            }
                         }
                     }
 
@@ -160,16 +163,16 @@ namespace HISYSENG_Logitech
                         }
                     }
 
-                    _SQL = "INSERT INTO G_COMPANY VALUES (" + _SQL + ")";
+                    _SQL = "INSERT INTO G_USERS VALUES (" + _SQL + ")";
                     if (!Qry.Rs_NonQuery(_SQL))
                     {
-                        MessageBox.Show("거래처 추가 중 에러가 발생했습니다.");
+                        MessageBox.Show("사용자 추가 중 에러가 발생했습니다.");
                         return;
                     }
 
                     #endregion
 
-                    MessageBox.Show("거래처가 추가되었습니다.");
+                    MessageBox.Show("사용자가 추가되었습니다.");
 
                     #region 컨트롤 복구, 데이터 조회
 
@@ -224,11 +227,11 @@ namespace HISYSENG_Logitech
                     #region 쿼리 생성 및 실행
 
 
-                    _SQL = "UPDATE G_COMPANY SET " + _SQL;
+                    _SQL = "UPDATE G_USERS SET " + _SQL;
 
                     if (string.IsNullOrEmpty(_C_Code))
                     {
-                        MessageBox.Show("변경할 회사가 선택되지 않았습니다.");
+                        MessageBox.Show("변경할 사용자가 선택되지 않았습니다.");
                         return;
                     }
 
@@ -236,13 +239,13 @@ namespace HISYSENG_Logitech
 
                     if (!Qry.Rs_NonQuery(_SQL))
                     {
-                        MessageBox.Show("거래처 업데이트 중 에러가 발생했습니다.");
+                        MessageBox.Show("사용자 업데이트 중 에러가 발생했습니다.");
                         return;
                     }
 
                     #endregion
 
-                    MessageBox.Show("거래처가 저장되었습니다.");
+                    MessageBox.Show("사용자가 저장되었습니다.");
 
 
                     #region 데이터 조회
