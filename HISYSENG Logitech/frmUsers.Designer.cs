@@ -299,7 +299,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPwd.Location = new System.Drawing.Point(413, 98);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(278, 22);
+            this.txtPwd.Size = new System.Drawing.Size(277, 22);
             this.txtPwd.TabIndex = 8;
             this.txtPwd.Tag = "4";
             // 
@@ -373,7 +373,7 @@
             this.txt_C_Name.Location = new System.Drawing.Point(413, 66);
             this.txt_C_Name.Name = "txt_C_Name";
             this.txt_C_Name.ReadOnly = true;
-            this.txt_C_Name.Size = new System.Drawing.Size(278, 22);
+            this.txt_C_Name.Size = new System.Drawing.Size(277, 22);
             this.txt_C_Name.TabIndex = 2;
             this.txt_C_Name.Tag = "";
             // 

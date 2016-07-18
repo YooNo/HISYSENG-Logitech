@@ -219,7 +219,7 @@ namespace HISYSENG_Logitech
 
     class _UserInfo
     {
-        string id, name, c_code, dept, mlevel, jobstatus, phone, mobile, mail;
+        string id, name, c_code, c_name, dept, mlevel, jobstatus, phone, mobile, mail;
 
         public string ID
         {
@@ -254,6 +254,18 @@ namespace HISYSENG_Logitech
             get
             {
                 return c_code;
+            }
+        }
+
+        public string C_Name
+        {
+            set
+            {
+                c_name = value;
+            }
+            get
+            {
+                return c_name;
             }
         }
 

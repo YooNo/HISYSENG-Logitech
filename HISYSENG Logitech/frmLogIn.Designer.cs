@@ -37,6 +37,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCompany_Code = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -117,13 +118,24 @@
             this.txtCompany_Code.Name = "txtCompany_Code";
             this.txtCompany_Code.Size = new System.Drawing.Size(232, 20);
             this.txtCompany_Code.TabIndex = 1;
-            this.txtCompany_Code.Text = "1000";
+            this.txtCompany_Code.Text = "4000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(324, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "이미지 들어 갈 곳";
             // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(766, 420);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPwd);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCompany_Code;
+        private System.Windows.Forms.Label label4;
     }
 }
